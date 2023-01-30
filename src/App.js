@@ -1,34 +1,10 @@
-const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: "Hats"
-    },
-    {
-      id: 2,
-      title: "Jackets"
-    },
-    {
-      id: 3,
-      title: "Sneakers"
-    }
-  ];
+import "./categories.styles.scss";
+// import CategoryItem from "./components/category-item/category-item.component";
+// import Directory from "./components/directory/directory.component";
+import Directory from "./components/directory/directory.component";
 
-  return (
-    <div className="categories-container">
-      {categories.map(category => {
-        return (
-          <div className="category-container" key={category.id}>
-            {/* <img src="" alt=""/> */}
-            <div className="category-body-container">
-              <h2>{category.title}</h2>
-              <p>Shop Now</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+const App = () => {
+  return <Directory />;
 };
 
 export default App;
