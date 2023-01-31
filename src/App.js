@@ -1,10 +1,24 @@
-import "./categories.styles.scss";
-// import CategoryItem from "./components/category-item/category-item.component";
-// import Directory from "./components/directory/directory.component";
-import Directory from "./components/directory/directory.component";
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/home/home.component";
+import Nav from "./routes/Navigation/nav.component";
+
+const Shop = () => {
+  return (
+    <div>
+      <p>I AM SHOP PAGE</p>
+    </div>
+  );
+};
 
 const App = () => {
-  return <Directory />;
+  return (
+    <Routes>
+      <Route path="/" element={<Nav />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
