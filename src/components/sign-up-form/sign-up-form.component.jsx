@@ -38,6 +38,7 @@ const SignUpForm = () => {
       );
 
       await createUserDocumentFromAuth(user, { displayName });
+
       resetFormFields();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
@@ -46,8 +47,6 @@ const SignUpForm = () => {
       console.log("user creation encountered an error", error);
     }
   };
-
-  //   console.log(formFields);
 
   const handleChange = event => {
     const { name, value } = event.target;
